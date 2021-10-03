@@ -25,5 +25,29 @@
         ]
       }
     }
+  },
+  "api": {
+    "imb": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 60,
+              "description": "imbkey"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
+  },
+  "storage": {
+    "imb": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
